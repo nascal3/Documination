@@ -1,0 +1,10 @@
+[
+  {
+    "name": "User Management",
+    "tags": ["user"]
+  },
+  {
+    "name": "Statistics",
+    "tags": ["store", "pet"]
+  }
+]

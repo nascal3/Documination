@@ -1,0 +1,23 @@
+{
+  "name": "redoc-maker",
+  "version": "1.0.0",
+  "description": "Generate ReDoc documentation",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "generate": "node index.js",
+    "create-doc": "npm run generate && redocly build-docs dist/swagger.json --output=dist/index.html"
+  },
+  "keywords": [
+    "redoc",
+    "openAPI"
+  ],
+  "author": "Caleb Nasio",
+  "license": "ISC",
+  "dependencies": {
+    "@redocly/cli": "^1.8.2"
+  },
+  "devDependencies": {}
+}

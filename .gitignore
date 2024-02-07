@@ -1,0 +1,8 @@
+node_modules
+
+# IntelliJ project files
+.vscode
+.idea
+*.iml
+out
+gen

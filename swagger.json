@@ -1,0 +1,67 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "The Buy Now, Pay Later service is a value-added offering provided to our esteemed customers, facilitating access to credit from Kyosk based on a creditworthiness score derived from transactional data and records within our possession. In certain scenarios, Kyosk functions as an intermediary, facilitating borrowing for our customers from our network of partnering financial institutions. This approach enhances their access to credit and contributes to the growth of their businesses.",
+    "version": "2.0.0",
+    "title": "Kyosk: Buy Now Pay Later (BNPL)",
+    "x-logo": {
+      "url": "https://logo.lusha.co/d/company_51660878_logo.jpg?w=100&h=100",
+      "backgroundColor": "#FFFFFF",
+      "altText": "Kyosk logo"
+    },
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "petstore.swagger.io",
+  "basePath": "/v2",
+  "tags": [],
+  "x-tagGroups": [],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {},
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    },
+    "petstore_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://petstore.swagger.io/oauth/authorize",
+      "flow": "implicit",
+      "scopes": {
+        "read:pets": "read your pets",
+        "write:pets": "modify pets in your account"
+      }
+    }
+  },
+  "definitions": {
+    "Tag": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Tag"
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
