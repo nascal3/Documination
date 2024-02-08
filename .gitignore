@@ -1,6 +1,9 @@
+# Any generated documentation
+dist/*
+
 node_modules
 
-# IntelliJ project files
+# IntelliJ or vscode project files
 .vscode
 .idea
 *.iml
