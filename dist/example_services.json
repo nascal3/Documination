@@ -5,7 +5,7 @@
     "version": "1.0.3",
     "title": "Example Services",
     "x-logo": {
-      "url": "./assets/kyosk-logo.png",
+      "url": "https://www.kyosk.app/wp-content/themes/kyosk/images/kyosk-logo.png",
       "backgroundColor": "#174993",
       "altText": "Kyosk logo"
     },
