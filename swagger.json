@@ -5,8 +5,8 @@
     "version": "1.0.0",
     "title": "Kyosk: Documination: An API Illumination\uD83D\uDCA1",
     "x-logo": {
-      "url": "https://logo.lusha.co/d/company_51660878_logo.jpg?w=100&h=100",
-      "backgroundColor": "#FFFFFF",
+      "url": "https://www.kyosk.app/wp-content/themes/kyosk/images/kyosk-logo.png",
+      "backgroundColor": "#174993",
       "altText": "Kyosk logo"
     },
     "termsOfService": "http://swagger.io/terms/",

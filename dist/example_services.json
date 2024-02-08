@@ -5,8 +5,8 @@
     "version": "1.0.3",
     "title": "Example Services",
     "x-logo": {
-      "url": "https://logo.lusha.co/d/company_51660878_logo.jpg?w=100&h=100",
-      "backgroundColor": "#FFFFFF",
+      "url": "./assets/kyosk-logo.png",
+      "backgroundColor": "#174993",
       "altText": "Kyosk logo"
     },
     "termsOfService": "http://swagger.io/terms/",
