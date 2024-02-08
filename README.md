@@ -1,4 +1,4 @@
-## Documination: An API Illumination💡
+## Documination: An API documentation Illumination💡
 This project generates documentation for APIs done **OpenAPI** standards and creates a _Redoc_ HTML file
 with a corresponding JSON representation of the same documentation.
 ### Set-up
