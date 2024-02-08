@@ -78,3 +78,17 @@ file `user.json` under the `example_services` directory.
 
 **NB:** _The JSON structure follows `openAPI 2.0`, but will also work with `openAPI 3.0`
 JSON format._
+
+### Finally generate 🚀
+Once all your documentation JSON files are in place run `npm run generate` or `node index.js` and get your docs 
+generated. Once successfully generated this is what you will see on the CLI:
+
+![generated.png](assets%2Fgenerated.png)
+
+You will then find the documentation generated in **_JSON_** and _**HTML**_ in the `dist` directory. As shown in the 
+below example.
+
+![generated_result.png](assets%2Fgenerated_result.png)
+
+Done... go make awesome docs🔥
+
