@@ -2,7 +2,8 @@
 This project generates documentation for APIs done **OpenAPI** standards and creates a _Redoc_ HTML file
 with a corresponding JSON representation of the same documentation.
 ### Set-up
-Once you have cloned the project file on your preferred location. Navigate to the root folder and on CLI run `npm install`. That's all!
+Once you have cloned the project file on your preferred location. Navigate to the root folder and on 
+CLI run `npm install`. That's all!😊
 
 ### Generate documentation
 Now on to the fun part, generate your documentation. Navigate to the `docs` folder that 
