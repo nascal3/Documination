@@ -21,11 +21,11 @@
   },
   "servers": [
     {
-      "url": "https://develoment-server.com",
+      "url": "https://develoment-server/api/v1.com",
       "description": "Development server"
     },
     {
-      "url": "https://production-server.com",
+      "url": "https://production-server/api/v1.com",
       "description": "Production server"
     }
   ],

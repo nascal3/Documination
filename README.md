@@ -14,7 +14,7 @@ The naming convention of your documentation file <span style="color:red">**MUST 
 Create a `tags` folder under your main documentation folder. This file will contain the JSON files that will be used to create tags used to help group/arrange 
 your documentation. Below is an image with an example of the structure:
 
-![File_structure.png](assets%2FFile_structure.png)
+![file-structure.png](assets%2Ffile-structure.png)
 
 This example above takes to account the main documentation folder is named `example_services`. In the `tags` folder create the
 `tagGroups.json` file to be used to group your tags. If you choose to exempt grouping your tags
@@ -50,7 +50,7 @@ _**pet.json**_
   }
 }
 ```
-It is also mandatory to have a description about the project you are documenting this details can be set in
+It is also **MANDATORY** to have a description about the project you are documenting this details can be set in
 the `info.json` file under the project directory. Here is an example of how the format is set:\
 **NB:** _The `info.json` file and its contents are required. The build will fail if left out._
 
@@ -62,6 +62,25 @@ the `info.json` file under the project directory. Here is an example of how the 
   "title": "Example Services"
 }
 ```
+
+To set up the documentation for the default base URLs of your application endpoints, this can be done in the `servers.json` file
+this file if under the `servers` directory. This file is also **MANDATORY** for the documentation to generate successfully.
+Here is an example of the structure of the contents in this file:
+
+```json
+[
+  {
+    "url": "https://develoment-server/api/v1.com",
+    "description": "Development server"
+  },
+  {
+    "url": "https://production-server/api/v1.com",
+    "description": "Production server"
+  }
+]
+```
+
+**NB:** _The `servers.json` file and its contents are required. The build will fail if left out._
 #### Endpoints documentation:
 The _JSON_ files to document endpoints will be under your documentation directory.
 Here's an example of how the *JSON* structure would look like in the `user.json` file:
