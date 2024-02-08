@@ -19,8 +19,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "kyosk.app",
-  "basePath": "/v2",
+  "servers": [],
   "tags": [],
   "x-tagGroups": [],
   "schemes": [

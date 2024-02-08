@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://develoment-server.com",
+    "description": "Development server"
+  },
+  {
+    "url": "https://production-server.com",
+    "description": "Production server"
+  }
+]

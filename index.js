@@ -53,6 +53,7 @@ const createTagsInJsonFiles = () => {
         });
 
         const infoContent = getDocumentationInfo(`./docs/${folder}`);
+        const baseServerContent = getBaseServerDocumentation(`./docs/${folder}`);
         const tagGroupPath = `${directoryPath}/tagGroups.json`;
         let tagGroupContent = [];
 
@@ -65,6 +66,7 @@ const createTagsInJsonFiles = () => {
         const { info } = templateCopy;
         const newJSON = {
             ...templateCopy,
+            servers: [...baseServerContent],
             info: {
                 ...info,
                 ...infoContent,
@@ -82,6 +84,10 @@ const createTagsInJsonFiles = () => {
 const getDocumentationInfo = (directoryPath) => {
     const infoFilePath = `${directoryPath}/info.json`;
     return doesFileExist(infoFilePath) ? JSON.parse(fs.readFileSync(infoFilePath, 'utf8')) : {};
+};
+const getBaseServerDocumentation = (directoryPath) => {
+    const serversInfoFilePath = `${directoryPath}/servers/servers.json`;
+    return doesFileExist(serversInfoFilePath) ? JSON.parse(fs.readFileSync(serversInfoFilePath, 'utf8')) : [];
 };
 
 const doesFileExist = (filePath) => {
@@ -113,7 +119,7 @@ const readPathJsonFiles = (jsonData) => {
             const jsonData = JSON.parse(fileContent);
             newPath = { ...paths, ...newPath, ...jsonData };
         } catch (error) {
-            console.error(`Error parsing JSON file ${jsonFile}:`, error.message);
+            console.error(`Error parsing JSON file: ${jsonFile}:`, error.message);
         }
     });
     createJSONFile({ ...jsonData, paths: newPath });

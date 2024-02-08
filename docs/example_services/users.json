@@ -307,6 +307,17 @@
     }
   },
   "/user/login": {
+    "servers": [
+      {
+        "url": "https://auth-dev-server.com",
+        "description": "Development server",
+        "basePath": "v2"
+      },
+      {
+        "url": "https://auth-production-server.com",
+        "description": "Production server"
+      }
+    ],
     "get": {
       "tags": [
         "user"
@@ -360,6 +371,16 @@
     }
   },
   "/user/logout": {
+    "servers": [
+      {
+        "url": "https://auth-dev-server.com",
+        "description": "Development server"
+      },
+      {
+        "url": "https://auth-production-server.com",
+        "description": "Production server"
+      }
+    ],
     "get": {
       "tags": [
         "user"
@@ -380,6 +401,16 @@
     }
   },
   "/user": {
+    "servers": [
+      {
+        "url": "https://auth-dev-server.com",
+        "description": "Development server"
+      },
+      {
+        "url": "https://auth-production-server.com",
+        "description": "Production server"
+      }
+    ],
     "post": {
       "tags": [
         "user"
