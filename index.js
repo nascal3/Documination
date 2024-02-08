@@ -67,6 +67,8 @@ const createTagsInJsonFiles = () => {
             }
         });
 
+        const infoContent = getDocumentationInfo(`./docs/${folder}`)
+
         const tagGroupPath = `${directoryPath}/tagGroups.json`;
         let tagGroupContent = [];
 
@@ -76,13 +78,29 @@ const createTagsInJsonFiles = () => {
             console.error(`Error parsing JSON: ${error.message}. Using default value.`);
         }
 
-        const newJSON = {...templateCopy, service: folder, tags: newTags, 'x-tagGroups': tagGroupContent }
+        const {info} = templateCopy
+        const newJSON = {
+            ...templateCopy,
+            info:{
+                ...info,
+                ...infoContent
+            },
+            service: folder,
+            tags: newTags,
+            'x-tagGroups': tagGroupContent
+        }
         newJSONFilesArray.push(newJSON);
     })
 
-    createNewSwaggerFiles(newJSONFilesArray)
+    createNewSwaggerFiles(newJSONFilesArray);
 }
 
+// Get the information about the project documentation.
+const getDocumentationInfo = (directoryPath) => {
+    // Read the contents of the info folder
+    const infoFilePath = `${directoryPath}/info.json`;
+    return JSON.parse(fs.readFileSync(infoFilePath, 'utf8'));
+}
 // Create new swagger files for each tags group data and paths structure in document.
 const createNewSwaggerFiles = (JSONFilesArray) => {
     JSONFilesArray.map(jsonFile => {
@@ -90,7 +108,7 @@ const createNewSwaggerFiles = (JSONFilesArray) => {
     })
 }
 
-// Fetch each paths structure and created JSON folders.
+// Fetch each path in the structure and created an appended JSON .
 const readPathJsonFiles = (jsonData) => {
     const {paths} = jsonData;
     let newPath = {};
@@ -99,8 +117,11 @@ const readPathJsonFiles = (jsonData) => {
     // Read the contents of the folder
     const files = fs.readdirSync(docsDirectory);
 
-    // Filter out JSON files
-    const jsonFiles = files.filter(file => path.extname(file).toLowerCase() === '.json');
+    // Filter out endpoint JSON path files
+    const jsonFiles = files.filter(file => {
+        if (file === 'info.json') return;
+        return path.extname(file).toLowerCase() === '.json'
+    });
 
     // Read the content of each JSON file
     jsonFiles.forEach(jsonFile => {

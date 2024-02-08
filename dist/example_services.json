@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "The Buy Now, Pay Later service is a value-added offering provided to our esteemed customers, facilitating access to credit from Kyosk based on a creditworthiness score derived from transactional data and records within our possession. In certain scenarios, Kyosk functions as an intermediary, facilitating borrowing for our customers from our network of partnering financial institutions. This approach enhances their access to credit and contributes to the growth of their businesses.",
-    "version": "2.0.0",
-    "title": "Kyosk: Buy Now Pay Later (BNPL)",
+    "description": "This is an example of how & where the description of your application should be put. Use `markdown` format if you want to.",
+    "version": "1.0.3",
+    "title": "Example Services",
     "x-logo": {
       "url": "https://logo.lusha.co/d/company_51660878_logo.jpg?w=100&h=100",
       "backgroundColor": "#FFFFFF",
@@ -42,7 +42,21 @@
       }
     }
   ],
-  "x-tagGroups": [],
+  "x-tagGroups": [
+    {
+      "name": "User Management",
+      "tags": [
+        "user"
+      ]
+    },
+    {
+      "name": "Statistics",
+      "tags": [
+        "store",
+        "pet"
+      ]
+    }
+  ],
   "schemes": [
     "https",
     "http"
@@ -1496,5 +1510,5 @@
     "description": "Find out more about Swagger",
     "url": "http://swagger.io"
   },
-  "service": "financial_services"
+  "service": "example_services"
 }
