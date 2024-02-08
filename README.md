@@ -58,4 +58,5 @@ Here's an example of how the *JSON* structure would look like in the `user.json`
 To explore further information on the JSON endpoint representation structure, look at the 
 file `user.json` under the `example_services` directory.
 
-**NB:** The JSON structure follows _openAPI 2.0_, but will also work with _openAPI 3.0_ JSON format.
+<span style="color:blue">**NB:**</span> _The JSON structure follows `openAPI 2.0`, but will also work with `openAPI 3.0`
+JSON format._
