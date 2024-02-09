@@ -84,7 +84,8 @@ Here is an example of the structure of the contents in this file:
 **NB:** _The `servers.json` file and its contents are required. The build will fail if left out._
 #### Endpoints documentation:
 The _JSON_ files to document endpoints will be under your documentation directory.
-Here's an example of how the *JSON* structure would look like in the `user.json` file:
+Here's an example of how the *JSON* structure would look like in the `user.json` file to document 
+the user related endpoints:
 
 **_example_services/user.json_**
 ```json
