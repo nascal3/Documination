@@ -99,7 +99,7 @@ the `user` related endpoints:
 ```
 
 You also have the option to specify/override the default base URL configuration for your endpoints here.
-To override this default base URL configuration for a specific endpoint, place the [server configuration block](#_serversjson_)
+To override this default base URL configuration for a specific endpoint, place the [server configuration block](#example_servicesserversserversjson)
 as the first argument in the endpoint configuration object, as shown below.
 
 **_example_services/user.json_**
