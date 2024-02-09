@@ -310,8 +310,7 @@
     "servers": [
       {
         "url": "https://auth-dev-server.com",
-        "description": "Development server",
-        "basePath": "v2"
+        "description": "Development server"
       },
       {
         "url": "https://auth-production-server.com",

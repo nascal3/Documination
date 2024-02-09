@@ -23,7 +23,7 @@ this example.\
 **NB:** _The `tagGroups.json` is required file. It can however have an empty array if you wish to not use the feature it 
 provides._
 
-**_tagGroups.json_**
+**_example_services/tags/tagGroups.json_**
 ```json
 [
   {
@@ -39,7 +39,7 @@ provides._
 As for the other _JSON_ folders holding information about the endpoints documentation tag content. Their contents must
 be in the following format e.g. for the `pet.json` file (which represents a tag).
 
-_**pet.json**_
+_**example_services/pet.json**_
 ```json
 {
   "name": "pet",
@@ -54,7 +54,7 @@ It is also **MANDATORY** to have a description about the project you are documen
 the `info.json` file under the project directory. Here is an example of how the format is set:\
 **NB:** _The `info.json` file and its contents are required. The build will fail if left out._
 
-**_info.json_**
+**_example_services/info.json_**
 ```json
 {
   "description": "This is an example of how & where the description of your application should be put. Use `markdown` format if you want to.",
@@ -67,6 +67,7 @@ To set up the documentation for the default base URLs of your application endpoi
 this file if under the `servers` directory. This file is also **MANDATORY** for the documentation to generate successfully.
 Here is an example of the structure of the contents in this file:
 
+#### _**example_services/servers/servers.json**_
 ```json
 [
   {
@@ -84,6 +85,8 @@ Here is an example of the structure of the contents in this file:
 #### Endpoints documentation:
 The _JSON_ files to document endpoints will be under your documentation directory.
 Here's an example of how the *JSON* structure would look like in the `user.json` file:
+
+**_example_services/user.json_**
 ```json
 {
   "/user/createWithArray": {...},
@@ -93,6 +96,32 @@ Here's an example of how the *JSON* structure would look like in the `user.json`
   "/user": {...}
 }
 ```
+
+You also have the option to specify/override the default base URL configuration for your endpoints here.
+To override this default base URL configuration for a specific endpoint, place the [server configuration block](#_serversjson_)
+as the first argument in the endpoint configuration object, as shown below.
+
+**_example_services/user.json_**
+```json
+  "/user/createWithArray": {...},
+  "/user/createWithList": {...},
+  "/user/{username}": {...},
+  "/user/login": {
+    "servers": [
+        {
+        "url": "https://auth-dev-server.com",
+        "description": "Development server"
+        },
+        {
+        "url": "https://auth-production-server.com",
+        "description": "Production server"
+        }
+    ],
+    "get": {...}
+  },
+  "/user": {...}
+```
+
 To explore further information on the JSON endpoint representation structure, look at the 
 file `user.json` under the `example_services` directory.
 
